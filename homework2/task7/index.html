@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write('open console');
+        //Сравнить null и 0. Попробуйте объяснить результат.
+        console.log(null == 0);                 // false
+        
+        console.log(typeof(null));              // object
+        console.log(typeof(0));                 // number
+        console.log(typeof(0) == typeof(null)); // false
+        
+        console.log(null == {});   // false        
+        // typeof(null)) выводит object потому что это признанный баг, сохраненный ради совместимости
+    
+    </script>
+</body>
+</html>
