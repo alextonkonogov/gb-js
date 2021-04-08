@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  
+    <script src="../task5/main.js"></script>
+    <script>
+        //Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).
+        function mathOperation(arg1, arg2, operation) {
+            var n = 0;
+            switch(operation) {
+                case "+": 
+                    n = getSum(arg1, arg2); 
+                    break;
+                case "-": 
+                    n = getDifference(arg1, arg2); 
+                    break;
+                case "*": 
+                    n = getProduct(arg1, arg2); 
+                    break;
+                case "/": 
+                    n = getDivision(arg1, arg2); 
+                    break;
+                default:
+                    n = "Cant define operation type";
+                    break;
+            }
+            
+            return n;
+        }
+        
+        document.write('open console');
+        console.log(mathOperation(2, 2, "+"));
+        console.log(mathOperation(2, 2, "-"));
+        console.log(mathOperation(2, 3, "*"));
+        console.log(mathOperation(4, 2, "/"));
+        console.log(mathOperation(4, 2, "&"));
+        
+    </script>
+</body>
+</html>
