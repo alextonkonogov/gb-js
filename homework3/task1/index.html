@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        
+        function isSimple(num) {
+          for(var j = 2; j < num; j++) {
+               if(num % j === 0) return false;
+          }
+          return num > 1;
+        }
+
+        var i = 0;
+        while (i <= 100) {
+            if (isSimple(i)) {
+                document.write(i + '<br>');
+            }
+            i++;
+        }
+    </script>
+</body>
+</html>

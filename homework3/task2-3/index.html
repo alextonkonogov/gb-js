@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        var basket = [
+            {
+                good: "Молоток",
+                price: 150,
+                count: 3
+            },
+            {
+                good: "Пила",
+                price: 500,
+                count: 1
+            },
+            {
+                good: "Отвертка",
+                price: 75,
+                count: 2
+            }
+        ];
+        
+        function countBasketPrice(b) {
+            var basketPrice = 0;
+            for (i = 0; i < b.length; i++) {
+                basketPrice += b[i].price * b[i].count;
+            }
+            return basketPrice;
+        }
+        
+        document.write('Всего товаров: ' + basket.length + ', на сумму: ' + countBasketPrice(basket));
+    </script>
+</body>
+</html>
