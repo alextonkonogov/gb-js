@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script src="questions.js"></script>
+    <script>
+        
+        function getQuestion(q, playerTotal, n) {
+            var txt = 'Вопрос №' + n + ': ' + q.question + '\nВарианты:\n';
+            
+            for (j = 0; j < q.variants.length; j++) {
+                txt += (j+1) + ' - ' + q.variants[j].text + '\n';
+            }
+            txt += 'Ваш текущий счет: ' + playerTotal + ' На кону: ' + q.cost + ' р. Вопрос: ' + n + '/' + questions.length; 
+            return txt;
+        }
+        
+        var playerTotal = 0;
+        var win = true;
+
+        for (var i = 0; i < questions.length; i++) {
+            do {
+                var playerAnswer = prompt(getQuestion(questions[i], playerTotal, i+1));
+            } while (isNaN(playerAnswer) || playerAnswer < 1 || playerAnswer > 4)
+
+            if (playerAnswer === null) {
+                alert('Вы завершили игру...');
+                win = false;
+                break;
+            }
+
+            if (questions[i].variants[parseInt(playerAnswer) -1].right) {
+                alert('Поздравляем! Это правильный ответ!\n\nВы заработали: ' + questions[i].cost + ' р.');
+                playerTotal += questions[i].cost;
+            } else {
+                alert('Вы выбрали неправильный ответ. Игра окончена.');
+                win = false;
+                break;
+            }
+        }
+
+        if (win) alert('Поздравляем! Вы справились со всеми вопросами и выйграли ' + playerTotal + ' р. !!!');
+
+    </script>
+</body>
+</html>
