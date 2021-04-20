@@ -1,0 +1,32 @@
+.chess-board-table td {
+    text-align: center;
+    vertical-align: middle
+}
+
+.chess-board-table tr:first-child,
+.chess-board-table tr:last-child {
+    text-transform: uppercase;
+}
+
+.chess-board-table tr:first-child,
+.chess-board-table td:last-child {
+  transform: rotate(-180deg);
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+}
+
+.w-text {
+    color:white;
+}
+
+.black {
+    background: #734d26;
+}
+
+.white {
+    background: #ecd9c6;
+}
