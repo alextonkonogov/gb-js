@@ -8,9 +8,10 @@
     text-transform: uppercase;
 }
 
-.chess-board-table tr:first-child,
+.chess-board-table tr:first-child>td,
 .chess-board-table td:last-child {
-  transform: rotate(-180deg);
+    transform: rotateX( -180deg ) scaleX(-1); 
+
 }
 
 .cell {
